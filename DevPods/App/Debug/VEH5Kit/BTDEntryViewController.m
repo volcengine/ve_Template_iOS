@@ -7,6 +7,8 @@
 
 #import "BTDEntryViewController.h"
 #import "BTDViewController.h"
+#import <VEH5Kit/VEH5KitManager.h>
+#import "OKDebugToast.h"
 #if __has_include(<FLEX/FLEXManager.h>)
 #import <FLEX/FLEXManager.h>
 #endif
@@ -55,6 +57,10 @@
                 vc.btd_type = BTDDebugType_example;
                 vc.offlineEnable = YES;
                 [wself.navigationController pushViewController:vc animated:YES];
+            }],
+            [[BDFeedModel alloc] initWithTitle:@"清理平台离线包" actionBlock:^{
+                [[VEH5KitManager sharedInstance] clearOfflineResources];
+                [self.view bds_toastShow:@"已清除平台离线包"];
             }]
         ];
         
