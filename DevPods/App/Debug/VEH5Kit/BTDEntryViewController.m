@@ -7,6 +7,7 @@
 
 #import "BTDEntryViewController.h"
 #import "BTDViewController.h"
+#import "BDNativeWebViewController.h"
 #import <VEH5Kit/VEH5KitManager.h>
 #import "OKDebugToast.h"
 #if __has_include(<FLEX/FLEXManager.h>)
@@ -61,6 +62,16 @@
             [[BDFeedModel alloc] initWithTitle:@"清理平台离线包" actionBlock:^{
                 [[VEH5KitManager sharedInstance] clearOfflineResources];
                 [self.view bds_toastShow:@"已清除平台离线包"];
+            }],
+            [[BDFeedModel alloc] initWithTitle:@"同层渲染(图片)" actionBlock:^{
+                BDNativeWebViewController *vc = [BDNativeWebViewController new];
+                vc.type = BDNativeWebViewControllerTypeImage;
+                [wself.navigationController pushViewController:vc animated:YES];
+            }],
+            [[BDFeedModel alloc] initWithTitle:@"同层渲染(视频)" actionBlock:^{
+                BDNativeWebViewController *vc = [BDNativeWebViewController new];
+                vc.type = BDNativeWebViewControllerTypeVideo;
+                [wself.navigationController pushViewController:vc animated:YES];
             }]
         ];
         
