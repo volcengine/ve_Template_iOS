@@ -30,11 +30,17 @@
         [BDNativeImageComponent class],
         [BDNativeVideoComponent class]
     ]];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     if (self.type == BDNativeWebViewControllerTypeImage) {
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://h5_native_components.web.bytedance.net/native-image.html"]]];
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://0.0.0.0:8090/native-image.html"]]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mars_native_components.web.bytedance.net/native-image.html"]]];
+
 
     }else{
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://h5_native_components.web.bytedance.net/native-video.html"]]];
+//        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://0.0.0.0:8090/native-video.html"]]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mars_native_components.web.bytedance.net/native-video.html"]]];
+
     }
     
     [[BDNativeLogManager sharedInstance] configLogBlock:^(NSString * _Nonnull log) {
