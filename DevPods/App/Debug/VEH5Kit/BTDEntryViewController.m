@@ -8,6 +8,7 @@
 #import "BTDEntryViewController.h"
 #import "BTDViewController.h"
 #import "BDNativeWebViewController.h"
+#import "BDWebPreloadDemoViewController.h"
 #import <VEH5Kit/VEH5KitManager.h>
 #import "OKDebugToast.h"
 #if __has_include(<FLEX/FLEXManager.h>)
@@ -72,8 +73,14 @@
                 BDNativeWebViewController *vc = [BDNativeWebViewController new];
                 vc.type = BDNativeWebViewControllerTypeVideo;
                 [wself.navigationController pushViewController:vc animated:YES];
+            }],
+            [[BDFeedModel alloc] initWithTitle:@"资源预加载" actionBlock:^{
+                BDWebPreloadDemoViewController *vc = [BDWebPreloadDemoViewController new];
+                [wself.navigationController pushViewController:vc animated:YES];
             }]
+
         ];
+        
         
         models = [NSMutableArray arrayWithArray:tmpModels];
         [self setFeedModels:models];
