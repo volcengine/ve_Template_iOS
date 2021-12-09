@@ -11,6 +11,8 @@
 #import "BDWebPreloadDemoViewController.h"
 #import <VEH5Kit/VEH5KitManager.h>
 #import "OKDebugToast.h"
+#import "BDBlankDetectViewController.h"
+
 #if __has_include(<FLEX/FLEXManager.h>)
 #import <FLEX/FLEXManager.h>
 #endif
@@ -77,8 +79,11 @@
             [[BDFeedModel alloc] initWithTitle:@"资源预加载" actionBlock:^{
                 BDWebPreloadDemoViewController *vc = [BDWebPreloadDemoViewController new];
                 [wself.navigationController pushViewController:vc animated:YES];
+            }],
+            [[BDFeedModel alloc] initWithTitle:@"白屏检测" actionBlock:^{
+                BDBlankDetectViewController *vc = [BDBlankDetectViewController new];
+                [wself.navigationController pushViewController:vc animated:YES];
             }]
-
         ];
         
         
