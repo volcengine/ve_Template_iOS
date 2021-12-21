@@ -34,12 +34,12 @@
 
     if (self.type == BDNativeWebViewControllerTypeImage) {
 //        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://0.0.0.0:8090/native-image.html"]]];
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mars_native_components.web.bytedance.net/native-image.html"]]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mars-jsbridge.vemarsdev.com/native-image.html"]]];
 
 
     }else{
 //        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://0.0.0.0:8090/native-video.html"]]];
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://mars_native_components.web.bytedance.net/native-video.html"]]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mars-jsbridge.vemarsdev.com/native-video.html"]]];
 
     }
     
