@@ -57,6 +57,18 @@ def release_pod
       'VEUpdateHelper',
       'VEUpdateView'
    ]
+  pod 'VERemoteConfig', :subspecs => [
+  'Core',
+  'OneKit',
+  'TestPage'
+  ]
+  pod 'VEInstall', :subspecs => [
+      'Core',
+      'URL/CN',
+      'IDFA',
+      'CAID',
+      'OneKit'
+  ]
 end
 
 def ov_pod

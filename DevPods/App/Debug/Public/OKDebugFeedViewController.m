@@ -34,8 +34,14 @@
 # if __has_include("BDHTestViewController.h")
 #  include "BDHTestViewController.h"
 # endif
+# if __has_include("VEInstallTestViewController.h")
+#  include "VEInstallTestViewController.h"
+# endif
 # if __has_include("TTViewController.h")
 #  include "TTViewController.h"
+# endif
+# if __has_include("VERemoteConfigViewController.h")
+#  include "VERemoteConfigViewController.h"
 # endif
 #endif
 
@@ -111,8 +117,17 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
 # if __has_include("BDHTestViewController.h")
     [self addFeedEntry:@"热修复测试" forViewController:BDHTestViewController.class];
 # endif
+    
+# if __has_include("VEInstallTestViewController.h")
+    [self addFeedEntry:@"设备注册测试" forViewController:VEInstallTestViewController.class];
+# endif
+    
 # if __has_include("TTViewController.h")
     [self addFeedEntry:@"发布测试" forViewController:TTViewController.class];
+# endif
+    
+# if __has_include("VERemoteConfigViewController.h")
+    [self addFeedEntry:@"远程配置测试" forViewController:VERemoteConfigViewController.class];
 # endif
     
 #endif
