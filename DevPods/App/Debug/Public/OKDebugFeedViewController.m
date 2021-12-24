@@ -12,6 +12,8 @@
 #import "OKDebugFeedAdapter.h"
 #import <OneKit/OKStartUpFunction.h>
 #import <OneKit/OKScreenshotTools.h>
+#import <OneKit/OKApplicationInfo.h>
+
 #import "OKDebugTextResultViewController.h"
 #import "OKDebugDefaultsModel.h"
 
