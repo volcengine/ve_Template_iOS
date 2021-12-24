@@ -178,11 +178,13 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
         NSMutableArray<OKDebugFeedModel *> *feeds = [NSMutableArray new];
 
         
+        OKApplicationInfo *info = [OKApplicationInfo sharedInstance];
         [feeds addObject:({
             OKDebugSettingModel *setting = [OKDebugSettingModel new];
             setting.title = @"修改APPID";
             setting.feedType = OKDebugFeedModelTypeInput;
             setting.settingKey = kOKStartUpDebugAppID;
+            setting.state = info.appID;
             setting;
         })];
         
@@ -191,6 +193,7 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
             setting.title = @"修改APPName";
             setting.feedType = OKDebugFeedModelTypeInput;
             setting.settingKey = kOKStartUpDebugAppName;
+            setting.state = info.appName;
             setting;
         })];
         
@@ -199,6 +202,7 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
             setting.title = @"修改channel";
             setting.feedType = OKDebugFeedModelTypeInput;
             setting.settingKey = kOKStartUpDebugChannel;
+            setting.state = info.channel;
             setting;
         })];
         
