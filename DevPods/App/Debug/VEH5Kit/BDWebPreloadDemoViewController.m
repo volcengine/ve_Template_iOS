@@ -45,7 +45,9 @@
     for (NSString *preloadRes in preloadArray) {
         [[BDWebViewPreloadManager sharedInstance] fetchDataForURLString:preloadRes headerField:@{} cacheDuration:60 * 60 queuePriority:NSOperationQueuePriorityNormal completion:^(NSError * _Nonnull error) {
             if (error) {
-                NSLog(@"preload %@ error %@", preloadRes, error);
+                NSLog(@"[MARS]:preload %@ error %@", preloadRes, error);
+            }else{
+                NSLog(@"[MARS]:preload %@ success %@", preloadRes, error);
             }
         }];
     }
