@@ -10,6 +10,7 @@
 #import <BDNativeWebComponentToB/BDNativeLogManager.h>
 #import <BDNativeWebComponentToB/BDNativeImageComponent.h>
 #import <BDNativeWebComponentToB/BDNativeVideoComponent.h>
+#import <OneKit/UIView+BTDAdditions.h>
 
 @interface BDNativeWebViewController ()<WKUIDelegate,WKNavigationDelegate>
 
@@ -57,14 +58,16 @@
 {
     if (!_webView)
     {
+        
+        CGRect rect = CGRectMake(0, UIApplication.sharedApplication.keyWindow.safeAreaInsets.top + 44, self.view.bounds.size.width, self.view.bounds.size.height - UIApplication.sharedApplication.keyWindow.btd_safeAreaInsets.bottom - UIApplication.sharedApplication.keyWindow.btd_safeAreaInsets.top - 94);
+        
         WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-        _webView = [[WKWebView alloc] initWithFrame:CGRectMake(0,
-                                                               self.navigationController.navigationBar.frame.size.height,
-                                                               self.view.frame.size.width,
-                                                               self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height) configuration:configuration];
+        _webView = [[WKWebView alloc] initWithFrame:rect configuration:configuration];
         _webView.UIDelegate = self;
         _webView.navigationDelegate = self;
         _webView.allowsBackForwardNavigationGestures = YES;
+        self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+
     }
     return _webView;
 }
