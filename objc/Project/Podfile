@@ -6,7 +6,7 @@ install! 'cocoapods',
   :warn_for_multiple_pod_sources => false,
   :deterministic_uuids => false
 
-  
+
 platform :ios, '9.0'
 inhibit_all_warnings!
 
@@ -27,6 +27,7 @@ def release_pod
   pod 'VEH5Kit'
   pod 'BDHotfix'
   pod 'TTNetworkManager'
+  pod 'SDWebImage','5.10.0'
   pod 'RangersAPM', '>=2.0.0', :subspecs => [
       'Crash',
       'WatchDog',
@@ -72,7 +73,7 @@ def ov_pod
 end
 
 def cn_pod
-  
+
 end
 
 target 'Template_InHouse' do
@@ -94,7 +95,7 @@ post_install do |installer|
   installer.pods_project.build_configurations.each do |config|
     update_deployment_config(config)
   end
-  
+
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       update_deployment_config(config)
@@ -105,7 +106,7 @@ post_install do |installer|
     project.build_configurations.each do |config|
       update_deployment_config(config)
     end
-    
+
     project.targets.each do |target|
       target.build_configurations.each do |config|
         update_deployment_config(config)
@@ -114,4 +115,3 @@ post_install do |installer|
   end
 
 end
-
