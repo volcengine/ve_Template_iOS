@@ -28,7 +28,7 @@ def release_pod
   pod 'VEPush'
   pod 'VEH5Kit'
   pod 'BDHotfix'
-  pod 'TTNetworkManager'
+  pod 'TTNetworkManager','5.0.29.26'
   pod 'RangersAPM', '>=2.0.0', :subspecs => [
       'Crash',
       'WatchDog',
