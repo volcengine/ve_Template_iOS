@@ -11,6 +11,9 @@
  */
 
 #import "TTViewController.h"
+
+# if __has_include(<VEAppUpdateHelper/TTAppUpdateHelperDefault.h>)
+
 #import <VEAppUpdateHelper/TTAppUpdateHelperDefault.h>
 #import <OneKit/OKServiceCenter.h>
 #import <OneKit/OKApplicationInfo.h>
@@ -64,3 +67,10 @@
     return [UIApplication.sharedApplication canOpenURL:[NSURL URLWithString:webUrl]];
 }
 @end
+
+# else
+
+@implementation TTViewController
+
+@end
+# endif
