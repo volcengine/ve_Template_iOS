@@ -25,9 +25,7 @@ OKAppTaskAddFunction () {
     apmConfig.deviceIDSource = RAPMDeviceIDSourceFromUser;
     
     // APM Log
-    dispatch_sync(dispatch_get_main_queue(), ^{
-        [RangersAPM allowDebugLogUsingLogger:nil];
-        [RangersAPM startWithConfig:apmConfig];
-    });
+    [RangersAPM allowDebugLogUsingLogger:nil];
+    [RangersAPM startWithConfig:apmConfig];
 }
 @end

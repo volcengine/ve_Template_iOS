@@ -17,7 +17,7 @@ OKAppTaskAddFunction () {
 @implementation OKStartUpUITask
 
 - (void)startWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions {
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[self rootVC]];
         window.rootViewController = nav;

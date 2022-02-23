@@ -6,6 +6,8 @@
 //
 
 #import "VERemoteConfigViewController.h"
+# if __has_include(<VERemoteConfig/VERemoteConfigManager.h>)
+
 #import "VERemoteConfig/VERemoteConfigManager.h"
 #import "VERemoteConfig/TestPageViewController.h"
 
@@ -254,3 +256,10 @@
 }
 
 @end
+
+# else
+
+@implementation VERemoteConfigViewController
+
+@end
+# endif
