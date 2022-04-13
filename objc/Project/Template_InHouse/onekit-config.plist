@@ -2,55 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>project_info</key>
+	<dict>
+		<key>ak</key>
+		<string>MARS_AK</string>
+		<key>app_id</key>
+		<string>MARS_APPID</string>
+		<key>privacy_mode</key>
+		<false/>
+		<key>sk</key>
+		<string>MARS_SK</string>
+	</dict>
 	<key>services</key>
 	<dict>
-		<key>update</key>
-		<dict>
-			<key>host</key>
-			<string>xxx</string>
-		</dict>
-		<key>jsbridge_services</key>
+		<key>h5</key>
 		<dict>
 			<key>auth_enable</key>
 			<false/>
-			<key>auth_domain</key>
-			<string>AUTH_DOMAIN</string>
-		</dict>
-		<key>gecko_services</key>
-		<dict>
-			<key>platform_domain</key>
-			<string>PLATFORM_DOMAINS</string>
-			<key>pattern</key>
-			<string>PATTERN</string>
-			<key>gecko_channels</key>
-			<array>
-				<string>gecko_channels</string>
-			</array>
 			<key>gecko_access_key</key>
 			<string>GECKO_ACCESS_KEY</string>
+			<key>gecko_channels</key>
+			<array>
+				<string>mars-jsbridge</string>
+			</array>
+			<key>gecko_host</key>
+			<string>GECKO_HOST</string>
+			<key>js_host</key>
+			<string>JS_HOST</string>
+			<key>pattern</key>
+			<string>GECKO_PATTERN</string>
 		</dict>
-		<key>bdhotfix</key>
+		<key>hotfix</key>
 		<dict>
-			<key>dist_area</key>
-			<string>cn</string>
-			<key>domain_name</key>
-			<string>plugin-patch-api.bytedance.com</string>
-			<key>debug</key>
-			<true/>
+			<key>host</key>
+			<string>HOTFIX_HOST</string>
+		</dict>
+		<key>remote_config</key>
+		<dict>
+			<key>host</key>
+			<string>REMOTE_CONFIG_HOST</string>
+		</dict>
+		<key>update</key>
+		<dict>
+			<key>host</key>
+			<string>RELEASE_HOST</string>
 		</dict>
 	</dict>
 	<key>version</key>
 	<integer>1</integer>
-	<key>project_info</key>
-	<dict>
-		<key>ak</key>
-		<string>MARS_AK_KEY</string>
-		<key>sk</key>
-		<string>MARS_SK_KEY</string>
-		<key>app_id</key>
-		<string>APP_ID</string>
-		<key>is_inhouse_app</key>
-		<false/>
-	</dict>
 </dict>
 </plist>
