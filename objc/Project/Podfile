@@ -24,6 +24,10 @@ def release_pod
     'Screenshot',
     'Core'
   ]
+  pod 'Timor'
+  pod 'TimorHostPlugins'
+  # pod 'VESMStorageInner'
+  # pod 'WCDBOptimizedSQLCipher',:git => 'https://github.com/lilidan/sqlcipher.git', :branch => 'sm4'
   pod 'VEH5Kit'
   pod 'BDHotfix'
   pod 'TTNetworkManager','5.0.29.26'

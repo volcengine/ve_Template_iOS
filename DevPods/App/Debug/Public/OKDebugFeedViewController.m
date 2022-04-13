@@ -45,6 +45,15 @@
 # if __has_include("VERemoteConfigViewController.h")
 #  include "VERemoteConfigViewController.h"
 # endif
+
+#if __has_include("BDPOKViewController.h")
+# include "BDPOKViewController.h"
+# endif
+
+# if __has_include("OKStorageDemoViewController.h")
+#  include "OKStorageDemoViewController.h"
+# endif
+
 #endif
 
 static NSString *const kOKStartUpDebugAppID     = @"kOKStartUpDebugAppID";
@@ -118,6 +127,14 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
     
 # if __has_include("BDHTestViewController.h")
     [self addFeedEntry:@"热修复测试" forViewController:BDHTestViewController.class];
+# endif
+
+# if __has_include("BDPOKViewController.h")
+    [self addFeedEntry:@"小程序 Demo" forViewController:BDPOKViewController.class];
+#endif
+
+# if __has_include("OKStorageDemoViewController.h")
+    [self addFeedEntry:@"存储测试" forViewController:OKStorageDemoViewController.class];
 # endif
     
 # if __has_include("VEInstallTestViewController.h")

@@ -29,6 +29,7 @@ Pod::Spec.new do |s|
     bd.dependency 'App/Base'
     bd.dependency 'TTNetworkManager'
     bd.dependency 'OneKit/Defaults'
+    bd.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public/WCDB"' }
   end
 
 end
