@@ -35,6 +35,12 @@
 # if __has_include("VERemoteConfigListViewController.h")
 #  include "VERemoteConfigListViewController.h"
 # endif
+
+# if __has_include("BDPOKViewController.h")
+#  include "BDPOKViewController.h"
+# endif
+
+
 #endif
 
 
@@ -168,6 +174,12 @@
 # if __has_include("VERemoteConfigListViewController.h")
     [self.demoItems addObject:@[@"远程配置",@"config",VERemoteConfigListViewController.class]];
 # endif
+    
+# if __has_include("BDPOKViewController.h")
+    [self.demoItems addObject:@[@"小程序",@"rc1",BDPOKViewController.class]];
+# endif
+
+    
 #endif
     
 }
