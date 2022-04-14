@@ -16,8 +16,10 @@
 @implementation OKScreenshotViewController
 
 - (void)viewDidLoad {
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+    self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 70, self.view.bounds.size.width, self.view.bounds.size.height - 70)];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.webView.backgroundColor = [UIColor whiteColor];
     self.webView.scrollView.bounces = NO;
     self.webView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.webView];
@@ -28,17 +30,40 @@
     [self.webView loadRequest:request];
 
     self.title = @"截屏";
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     // Do any additional setup after loading the view.
+    UIView *containerView0 = [[UIView alloc] initWithFrame:CGRectMake(0, -70, self.view.bounds.size.width, 70)];
+    containerView0.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:containerView0];
     
-    UIBarButtonItem *btn0 = [[UIBarButtonItem alloc] initWithTitle:@"全屏截图" style:UIBarButtonItemStylePlain target:self action:@selector(snapshotBtnClick)];
     
-    UIBarButtonItem *btn1 = [[UIBarButtonItem alloc] initWithTitle:@"webview截图" style:UIBarButtonItemStylePlain target:self action:@selector(webviewSnapshotBtnClick)];
+    UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 70)];
+    containerView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    containerView.layer.shadowRadius = 1;
+    containerView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:containerView];
     
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:btn0, btn1, nil];
+    UIButton *btn0 = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn0.frame = CGRectMake(16+8, 70/2 - 44/2, self.view.bounds.size.width/2 - 32, 44);
+    btn1.frame = CGRectMake(16 + self.view.bounds.size.width/2-8, 70/2 - 44/2, self.view.bounds.size.width/2 - 32, 44);
+    btn0.layer.cornerRadius = btn1.layer.cornerRadius = 4;
+    btn0.titleLabel.font = [UIFont systemFontOfSize:16];
+    btn1.titleLabel.font = [UIFont systemFontOfSize:16];
+    [btn0 setTitle: @"全屏截图" forState:UIControlStateNormal];
+    [btn1 setTitle: @"webview截图" forState:UIControlStateNormal];
     
+    btn0.backgroundColor = [UIColor colorWithRed:22/255.0 green:100/255.0 blue:255/255.0 alpha:1];
+    btn1.backgroundColor = [UIColor colorWithRed:22/255.0 green:100/255.0 blue:255/255.0 alpha:1];
+    [btn0 addTarget:self action:@selector(snapshotBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [btn1 addTarget:self action:@selector(webviewSnapshotBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [containerView addSubview:btn0];
+    [containerView addSubview:btn1];
+
 }
 
-- (void)snapshotBtnClick {
+- (void)snapshotBtnClick:(UIButton *)btn {
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
         if (status == PHAuthorizationStatusAuthorized) {
           onMainThreadAsync(^{
@@ -50,7 +75,7 @@
     }];
 }
 
-- (void)webviewSnapshotBtnClick {
+- (void)webviewSnapshotBtnClick:(UIButton *)btn  {
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
         if (status == PHAuthorizationStatusAuthorized) {
           onMainThreadAsync(^{

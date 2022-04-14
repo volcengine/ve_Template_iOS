@@ -7,14 +7,17 @@
 //
 
 #import "BDWebPreloadDemoViewController.h"
-#import <BDWebKitToB/WKWebView+BDOffline.h>
-#import <BDWebKitToB/BDWebOfflinePlugin.h>
-#import <BDWebKitToB/WKWebView+TTNet.h>
-#import <BDWebCoreToB/WKWebView+Plugins.h>
+
+
+#if __has_include(<VEH5Kit/BDWebViewOfflineManager.h>)
+#import <VEH5Kit/BDWebViewPreloadManager.h>
+#else
 #import <BDPreloadSDKToB/BDWebViewPreloadManager.h>
-#import <BDWebKitToB/BDWKPrecreator.h>
+#endif
+
 #import <VEH5Kit/VEH5Kit.h>
-#import <BDWebKitToB/BDWebViewOfflineManager.h>
+
+
 
 @interface BDWebPreloadDemoViewController ()
 

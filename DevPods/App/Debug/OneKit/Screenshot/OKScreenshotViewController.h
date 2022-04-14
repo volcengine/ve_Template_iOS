@@ -4,8 +4,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface OKScreenshotViewController : UIViewController
+#import "OKDemoBaseViewController.h"
+@interface OKScreenshotViewController : OKDemoBaseViewController
 
 @end
 

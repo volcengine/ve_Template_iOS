@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import "OKDemoBaseViewController.h"
 
-@interface TTViewController : UIViewController
+@interface TTViewController : OKDemoBaseViewController
 
 @end

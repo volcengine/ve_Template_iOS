@@ -27,7 +27,7 @@ OKAppTaskAddFunction () {
 }
 
 - (UIViewController *)rootVC {
-    Class claszz = NSClassFromString(@"OKDebugFeedViewController") ?: [OKFeedViewController class];
+    Class claszz = NSClassFromString(@"OKMainViewController") ?: [OKFeedViewController class];
     return [claszz new];
 }
 

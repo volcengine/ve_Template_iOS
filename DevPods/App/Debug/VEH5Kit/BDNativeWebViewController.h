@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OKDemoBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,9 +15,16 @@ typedef NS_ENUM(NSUInteger, BDNativeWebViewControllerType) {
     BDNativeWebViewControllerTypeVideo,
 };
 
-@interface BDNativeWebViewController : UIViewController
+
+
+
+@interface BDNativeWebViewController : OKDemoBaseViewController
 
 @property (nonatomic,assign) BDNativeWebViewControllerType  type;
+
+@end
+
+@interface BDNativeWebVideoViewController : BDNativeWebViewController
 
 @end
 

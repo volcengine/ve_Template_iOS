@@ -28,6 +28,38 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:243/255.0 blue:248/255.0 alpha:1.0];
+    self.title = @"发布服务";
+//    [self update];
+    CGFloat width = self.view.bounds.size.width;
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((width - 120) / 2, 120, 120, 120)];
+    imageView.image = [UIImage imageNamed:@"bg-banner-func4"];
+    [self.view addSubview:imageView];
+    
+    UILabel *checkTipLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame) + 8, width, 30)];
+    checkTipLabel1.font = [UIFont systemFontOfSize:18];
+    checkTipLabel1.textColor = [UIColor blackColor];
+    checkTipLabel1.textAlignment = NSTextAlignmentCenter;
+    checkTipLabel1.text = @"查看发布的新版本";
+    [self.view addSubview:checkTipLabel1];
+    
+    UILabel *checkTipLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(checkTipLabel1.frame) + 8, width, 30)];
+    checkTipLabel2.font = [UIFont systemFontOfSize:14];
+    checkTipLabel2.textColor = [UIColor grayColor];
+    checkTipLabel2.textAlignment = NSTextAlignmentCenter;
+    checkTipLabel2.text = @"发布服务是...";
+    [self.view addSubview:checkTipLabel2];
+    
+    UIButton *checkButton = [[UIButton alloc] initWithFrame:CGRectMake(16, CGRectGetMaxY(checkTipLabel2.frame) + 24, width - 32, 48)];
+    [checkButton addTarget:self action:@selector(checkButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [checkButton setTitle:@"点击查看" forState:UIControlStateNormal];
+    checkButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [checkButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    checkButton.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:checkButton];
+}
+
+- (void)checkButtonClicked:(UIButton *)btn {
     [self update];
 }
 

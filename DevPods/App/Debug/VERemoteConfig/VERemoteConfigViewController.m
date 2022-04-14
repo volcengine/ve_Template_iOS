@@ -29,6 +29,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = BackgroundColor;
     self.manager = [VERemoteConfigManager sharedInstance];
+//    VERemoteConfigInfo *info = [VERemoteConfigInfo new];
+//    info.host = @"XXX";
+//    info.deviceID = @"XXX";
+//    info.appKey = @"XXX";
+//    info.appSecret = @"XXX";
+//    info.interval = XXX;
+//    info.channel = @"XXX";
+//    [self.manager setUp:info];
+//    [self.manager setInterval:XXX];
     
     UIButton* testButton = [UIButton buttonWithType:UIButtonTypeCustom];
     testButton.titleLabel.font = [UIFont systemFontOfSize:25];
@@ -121,7 +130,6 @@
 
 
 - (void)show{
-//    NSDictionary *data = [[self.manager valueForKey:@"cacher"] getAllData];
     id cacher = [self.manager performSelector:@selector(cacher)];
     NSDictionary *data = [cacher performSelector:@selector(getAllData)];
     

@@ -25,10 +25,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Debug' do |bd|
     bd.source_files = 'App/Debug/**/*.{h,m,c,mm}'
-    bd.resources = 'App/Debug/**/*.js'
+    bd.resources = 'App/Debug/**/*.xcassets'
     bd.dependency 'App/Base'
     bd.dependency 'TTNetworkManager'
     bd.dependency 'OneKit/Defaults'
+    bd.resource_bundles = {
+        'Debug' => ['App/Debug/Assets/*.xcassets','App/Debug/Assets/*.js']
+    }
     bd.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public/WCDB"' }
   end
 

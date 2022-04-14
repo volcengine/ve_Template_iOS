@@ -7,6 +7,9 @@
 //
 
 #import "BDHTestViewController.h"
+
+# if __has_include(<BDHotfix/BDHotfix.h>)
+
 #import <BDHotfix/BDHotfix.h>
 
 @interface BDHTestViewController ()
@@ -17,11 +20,6 @@
 @end
 
 @implementation BDHTestViewController
-
-+ (void)load
-{
-//    [[BDHotfix sharedInstance] setPatchApplyer:[ExampleJSPatchApplyer new]];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,3 +65,10 @@
 }
 
 @end
+
+# else
+
+@implementation BDHTestViewController
+
+@end
+# endif
