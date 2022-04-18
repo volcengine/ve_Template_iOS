@@ -10,67 +10,29 @@ platform :ios, '9.0'
 inhibit_all_warnings!
 
 source 'https://cdn.cocoapods.org/'
-source 'https://github.com/volcengine/volcengine-specs.git'
+source 'git@code.byted.org:iOS_Library/volcengine_inner_binary_repo.git'
 
 def release_pod
-  pod 'OneKit', :subspecs => [
-    'BaseKit',
-    'Defaults',
-    'Database',
-    'MARS/Auth',
-    'Reachability',
-    'Service',
-    'StartUp',
-    'Screenshot',
-    'Core'
-  ]
-  pod 'Timor'
-  pod 'TimorHostPlugins'
+  pod 'VEKit', :path => "../../../VEKit"
+  
+#  pod 'RangersAPM', :subspecs => [
+#      'Crash',
+#      'WatchDog',
+#      'OOM',
+#      'LAG',
+#      'UserException',
+#      'Monitors',
+#      'UITrackers',
+#      'Hybrid',
+#      'MemoryGraph',
+#      'Network',
+#      'EventMonitor',
+#      'CN',
+#  ]
+  
   # pod 'VESMStorageInner'
   # pod 'WCDBOptimizedSQLCipher',:git => 'https://github.com/lilidan/sqlcipher.git', :branch => 'sm4'
-  pod 'VEH5Kit','1.1.6-rc0'
-  pod 'BDHotfix'
-  pod 'TTNetworkManager','5.0.29.26'
-  pod 'SDWebImage','5.10.0'
-  pod 'RangersAPM', '>=2.0.0', :subspecs => [
-      'Crash',
-      'WatchDog',
-      'OOM',
-      'LAG',
-      'UserException',
-      'Monitors',
-      'UITrackers',
-      'Hybrid',
-      'MemoryGraph',
-      'Network',
-      'EventMonitor',
-      'CN',
-  ]
-  pod 'RangersAppLog', :subspecs => [
-      'Core',
-      'Host/CN',
-      'OneKit',
-      'UITracker',
-      'Picker',
-      'Log',
-      'Unique'
-    ]
-  pod 'VEAppUpdateHelper', :subspecs => [
-      'VEUpdateHelper',
-      'VEUpdateView'
-   ]
-  pod 'VERemoteConfig', :subspecs => [
-       'Core',
-       'OneKit',
-       'TestPage'
-   ]
-  pod 'VEInstall', :subspecs => [
-       'Core',
-       'URL/CN',
-       'IDFA',
-       'CAID',
-       'OneKit'
-  ]
+
 end
 
 def ov_pod
