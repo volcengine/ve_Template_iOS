@@ -10,10 +10,27 @@ platform :ios, '9.0'
 inhibit_all_warnings!
 
 source 'https://cdn.cocoapods.org/'
-source 'git@code.byted.org:iOS_Library/volcengine_inner_binary_repo.git'
+source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
-  pod 'VEKit', :path => "../../../VEKit"
+  pod 'VEKit', "0.0.5-rc0", :subspecs => [
+    'OneKit',
+    'OneKitDemo',
+    'VEH5Kit',
+    'VEAppUpdateHelper',
+    'VEAppUpdateHelperDemo',
+    'VEInstall',
+    'VEInstallDemo',
+    'VERemoteConfig',
+    'VERemoteConfigDemo',
+    'RangersAppLog',
+    'RangersAppLogDemo',
+    'RangersAPM',
+    'RangersAPMDemo',
+    'RARegisterKit',
+    'BDHotfix',
+    'Timor'
+  ]
   
 #  pod 'RangersAPM', :subspecs => [
 #      'Crash',
