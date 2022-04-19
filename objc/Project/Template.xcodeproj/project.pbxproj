@@ -347,7 +347,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 492A1C54DEE693E63C87E8B4 /* Pods-Template_InHouse.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Template_InHouse/Template_InHouse.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -371,7 +370,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A43ED5D6FCCD7166C1CEBA2 /* Pods-Template_InHouse.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Template_InHouse/Template_InHouse.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
