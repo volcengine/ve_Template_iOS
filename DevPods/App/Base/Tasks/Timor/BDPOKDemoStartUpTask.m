@@ -9,10 +9,8 @@
 
 
 #import "BDPCustomPluginLogImpl.h"
-#import "BDPCustomPluginUserImpl.h"
 #import "BDPCustomPluginRouterImpl.h"
-#import "BDPCustomPluginApplicationImpl.h"
-
+#import "BDPCustomPluginBasicInfoImpl.h"
 
 #import <Timor/BDPTimorClientHostPlugins.h>
 
@@ -25,9 +23,8 @@ OKAppTaskAddFunction() {
 - (void)startWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> *)launchOptions
 {
     BDPTimorClientHostPlugins.sharedPlugins.logPlugin = BDPCustomPluginLogImpl.class;
-    BDPTimorClientHostPlugins.sharedPlugins.userPlugin = BDPCustomPluginUserImpl.class;
     BDPTimorClientHostPlugins.sharedPlugins.routerPlugin = BDPCustomPluginRouterImpl.class;
-    BDPTimorClientHostPlugins.sharedPlugins.applicationPlugin = BDPCustomPluginApplicationImpl.class;
+    BDPTimorClientHostPlugins.sharedPlugins.basicInfoPlugin = BDPCustomPluginBasicInfoImpl.class;
 }
 
 @end
