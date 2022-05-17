@@ -13,7 +13,7 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
-  pod 'VEKit', "0.0.5.2", :subspecs => [
+  pod 'VEKit', :path => '../../../VEKit', :subspecs => [
     'OneKit',
     'OneKitDemo',
     'VEH5Kit',
