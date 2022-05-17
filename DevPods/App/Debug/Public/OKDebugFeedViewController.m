@@ -10,6 +10,7 @@
 #import "OKDebugFeedLoader.h"
 #import "OKDebugFooterView.h"
 #import "OKDebugFeedAdapter.h"
+#import <OneKit/OKApplicationInfo.h>
 #import <OneKit/OKStartUpFunction.h>
 #import <OneKit/OKScreenshotTools.h>
 #import "OKDebugTextResultViewController.h"
