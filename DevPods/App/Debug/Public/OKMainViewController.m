@@ -35,9 +35,11 @@
 # if __has_include("VERemoteConfigListViewController.h")
 #  include "VERemoteConfigListViewController.h"
 # endif
-
-# if __has_include("BDPOKViewController.h")
-#  include "BDPOKViewController.h"
+# if __has_include("OKMarsInfoController.h")
+#  include "OKMarsInfoController.h"
+# endif
+# if __has_include("BDPOKListViewController.h")
+#  include "BDPOKListViewController.h"
 # endif
 
 
@@ -174,9 +176,13 @@
 # if __has_include("VERemoteConfigListViewController.h")
     [self.demoItems addObject:@[@"远程配置",@"config",VERemoteConfigListViewController.class]];
 # endif
-    
-# if __has_include("BDPOKViewController.h")
-    [self.demoItems addObject:@[@"小程序",@"rc1",BDPOKViewController.class]];
+
+# if __has_include("OKMarsInfoController.h")
+    [self.demoItems addObject:@[@"Mars 信息",@"debug",OKMarsInfoController.class]];
+# endif
+
+# if __has_include("BDPOKListViewController.h")
+    [self.demoItems addObject:@[@"小程序",@"rc1",BDPOKListViewController.class]];
 # endif
 
     

@@ -14,40 +14,32 @@ source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
   pod 'VEKit', :path => '../../../VEKit', :subspecs => [
-    'OneKit',
-    'OneKitDemo',
+#    'OneKit',
     'VEH5Kit',
     'VEAppUpdateHelper',
-    'VEAppUpdateHelperDemo',
     'VEInstall',
-    'VEInstallDemo',
     'VERemoteConfig',
-    'VERemoteConfigDemo',
     'RangersAppLog',
-    'RangersAppLogDemo',
     'RangersAPM',
-    'RangersAPMDemo',
     'RARegisterKit',
     'BDHotfix',
     'Timor'
   ]
   
-#  pod 'RangersAPM', :subspecs => [
-#      'Crash',
-#      'WatchDog',
-#      'OOM',
-#      'LAG',
-#      'UserException',
-#      'Monitors',
-#      'UITrackers',
-#      'Hybrid',
-#      'MemoryGraph',
-#      'Network',
-#      'EventMonitor',
-#      'CN',
-#  ]
+#  pod 'OneKit', :path => '../../../OneKit'
   
-  # pod 'VESMStorageInner'
+  pod 'VEKitDemo', :path => '../../../VEKitDemo', :subspecs => [
+    'OneKit',
+    'VEH5Kit',
+    'VEAppUpdateHelper',
+    'VEInstall',
+    'VERemoteConfig',
+    'RangersAppLog',
+    'RangersAPM',
+    'BDHotfix',
+    'Timor'
+  ]
+  
   # pod 'WCDBOptimizedSQLCipher',:git => 'https://github.com/lilidan/sqlcipher.git', :branch => 'sm4'
 
 end
@@ -62,7 +54,6 @@ end
 target 'Template_InHouse' do
   ov_pod
   release_pod
-  pod 'App/Debug',:path => './../../DevPods/', :inhibit_warnings => false
 end
 
 

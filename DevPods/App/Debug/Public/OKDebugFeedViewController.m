@@ -12,8 +12,6 @@
 #import "OKDebugFeedAdapter.h"
 #import <OneKit/OKStartUpFunction.h>
 #import <OneKit/OKScreenshotTools.h>
-#import <OneKit/OKApplicationInfo.h>
-
 #import "OKDebugTextResultViewController.h"
 #import "OKDebugDefaultsModel.h"
 
@@ -45,15 +43,12 @@
 # if __has_include("VERemoteConfigViewController.h")
 #  include "VERemoteConfigViewController.h"
 # endif
-
-#if __has_include("BDPOKViewController.h")
-# include "BDPOKViewController.h"
+# if __has_include("BDPOKListViewController.h")
+#  include "BDPOKListViewController.h"
 # endif
-
 # if __has_include("OKStorageDemoViewController.h")
 #  include "OKStorageDemoViewController.h"
 # endif
-
 #endif
 
 static NSString *const kOKStartUpDebugAppID     = @"kOKStartUpDebugAppID";
@@ -123,39 +118,26 @@ static NSString *const kOKStartUpDebugAppName   = @"kOKStartUpDebugAppName";
 # if __has_include("BTDEntryViewController.h")
     [self addFeedEntry:@"H5 服务" forViewController:BTDEntryViewController.class];
 # endif
-    
-    
 # if __has_include("BDHTestViewController.h")
     [self addFeedEntry:@"热修复测试" forViewController:BDHTestViewController.class];
 # endif
-
-# if __has_include("BDPOKViewController.h")
-    [self addFeedEntry:@"小程序 Demo" forViewController:BDPOKViewController.class];
-#endif
-
 # if __has_include("OKStorageDemoViewController.h")
     [self addFeedEntry:@"存储测试" forViewController:OKStorageDemoViewController.class];
 # endif
-    
 # if __has_include("VEInstallTestViewController.h")
     [self addFeedEntry:@"设备注册测试" forViewController:VEInstallTestViewController.class];
 # endif
-    
 # if __has_include("TTViewController.h")
     [self addFeedEntry:@"发布测试" forViewController:TTViewController.class];
 # endif
-    
 # if __has_include("VERemoteConfigViewController.h")
     [self addFeedEntry:@"远程配置测试" forViewController:VERemoteConfigViewController.class];
 # endif
-    
+# if __has_include("BDPOKListViewController.h")
+    [self addFeedEntry:@"小程序 Demo" forViewController:BDPOKListViewController.class];
+# endif
 #endif
-    
-    
-    
-    
-    
-    
+
     NSMutableArray<OKDebugSectionModel *> *feeds = [NSMutableArray new];
     [feeds addObject:({
         OKDebugSectionModel *model = [OKDebugSectionModel new];
