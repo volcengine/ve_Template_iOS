@@ -13,8 +13,8 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
-  pod 'VEKit', :path => '../../../VEKit', :subspecs => [
-#    'OneKit',
+  pod 'VEKit', '0.0.5.4', :subspecs => [
+    'OneKit',
     'VEH5Kit',
     'VEAppUpdateHelper',
     'VEInstall',
@@ -25,10 +25,8 @@ def release_pod
     'BDHotfix',
     'Timor'
   ]
-  
-#  pod 'OneKit', :path => '../../../OneKit'
-  
-  pod 'VEKitDemo', :path => '../../../VEKitDemo', :subspecs => [
+    
+  pod 'VEKitDemo', '0.0.5.4', :subspecs => [
     'OneKit',
     'VEH5Kit',
     'VEAppUpdateHelper',
