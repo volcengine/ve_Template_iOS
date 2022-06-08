@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96704B332680835600D5F8A0 /* onekit-config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96704B322680835600D5F8A0 /* onekit-config.plist */; };
+		96704B332680835600D5F8A0 /* onekit-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 96704B322680835600D5F8A0 /* onekit-config.json */; };
+		9F1F0A5628507FA100E87515 /* user.pem in Resources */ = {isa = PBXBuildFile; fileRef = 9F1F0A5528507FA100E87515 /* user.pem */; };
 		C4A5FDFE255EB2A400B85D6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A5FDFD255EB2A400B85D6E /* AppDelegate.m */; };
 		C4A5FE09255EB2A600B85D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A5FE08255EB2A600B85D6E /* Assets.xcassets */; };
 		C4A5FE0C255EB2A600B85D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A5FE0A255EB2A600B85D6E /* LaunchScreen.storyboard */; };
@@ -19,7 +20,8 @@
 /* Begin PBXFileReference section */
 		492A1C54DEE693E63C87E8B4 /* Pods-Template_InHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template_InHouse.debug.xcconfig"; path = "Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		7A43ED5D6FCCD7166C1CEBA2 /* Pods-Template_InHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Template_InHouse.release.xcconfig"; path = "Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse.release.xcconfig"; sourceTree = "<group>"; };
-		96704B322680835600D5F8A0 /* onekit-config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "onekit-config.plist"; sourceTree = "<group>"; };
+		96704B322680835600D5F8A0 /* onekit-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "onekit-config.json"; sourceTree = "<group>"; };
+		9F1F0A5528507FA100E87515 /* user.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = user.pem; sourceTree = "<group>"; };
 		9F2002C1271921D60023FE65 /* Template_InHouse.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Template_InHouse.entitlements; sourceTree = "<group>"; };
 		C4A5FDFA255EB2A400B85D6E /* Template_InHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template_InHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A5FDFC255EB2A400B85D6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9F1F0A5428507FA100E87515 /* cert */ = {
+			isa = PBXGroup;
+			children = (
+				9F1F0A5528507FA100E87515 /* user.pem */,
+			);
+			path = cert;
+			sourceTree = "<group>";
+		};
 		C4A5FDCD255EB18600B85D6E = {
 			isa = PBXGroup;
 			children = (
@@ -76,13 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				9F2002C1271921D60023FE65 /* Template_InHouse.entitlements */,
-				96704B322680835600D5F8A0 /* onekit-config.plist */,
+				96704B322680835600D5F8A0 /* onekit-config.json */,
 				C4A5FDFC255EB2A400B85D6E /* AppDelegate.h */,
 				C4A5FDFD255EB2A400B85D6E /* AppDelegate.m */,
 				C4A5FE08255EB2A600B85D6E /* Assets.xcassets */,
 				C4A5FE0A255EB2A600B85D6E /* LaunchScreen.storyboard */,
 				C4A5FE0D255EB2A600B85D6E /* Info.plist */,
 				C4A5FE0E255EB2A600B85D6E /* main.m */,
+				9F1F0A5428507FA100E87515 /* cert */,
 				C4A5FE19255EB2F100B85D6E /* FlutterAppDelegate.h */,
 				C4A5FE1A255EB2F100B85D6E /* FlutterAppDelegate.m */,
 			);
@@ -108,7 +119,7 @@
 				C4A5FDF6255EB2A400B85D6E /* Sources */,
 				C4A5FDF7255EB2A400B85D6E /* Frameworks */,
 				C4A5FDF8255EB2A400B85D6E /* Resources */,
-				2650492B6819802D06BFBE1E /* [CP] Copy Pods Resources */,
+				802314B39202873BBF9B3F25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,28 +169,14 @@
 			files = (
 				C4A5FE0C255EB2A600B85D6E /* LaunchScreen.storyboard in Resources */,
 				C4A5FE09255EB2A600B85D6E /* Assets.xcassets in Resources */,
-				96704B332680835600D5F8A0 /* onekit-config.plist in Resources */,
+				9F1F0A5628507FA100E87515 /* user.pem in Resources */,
+				96704B332680835600D5F8A0 /* onekit-config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2650492B6819802D06BFBE1E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		389F53CBD08934D786CA5307 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +197,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		802314B39202873BBF9B3F25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Template_InHouse/Pods-Template_InHouse-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -376,7 +388,9 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = X46375UBYG;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = Template_InHouse/Info.plist;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
