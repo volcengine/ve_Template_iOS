@@ -13,8 +13,9 @@ source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
 def release_pod
-  pod 'VEKit', '22.6.6', :subspecs => [
+  pod 'VEKit', :subspecs => [
     'OneKit',
+    'VECampaign',
     'VEH5Kit',
     'VEAppUpdateHelper',
     'VEInstall',
@@ -27,9 +28,10 @@ def release_pod
     'Timor'
   ]
     
-  pod 'VEKitDemo', '22.6.6', :subspecs => [
+  pod 'VEKitDemo', :subspecs => [
     'UITask',
     'OneKit',
+    'VECampaign',
     'VEH5Kit',
     'VEAppUpdateHelper',
     'VEInstall',
