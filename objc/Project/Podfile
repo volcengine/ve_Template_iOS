@@ -12,7 +12,7 @@ inhibit_all_warnings!
 source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
-def release_pod
+def mars_pod
   pod 'VEKit', '22.6.13', :subspecs => [
     'OneKit',
     'VECampaign',
@@ -56,7 +56,7 @@ end
 
 target 'Template_InHouse' do
   ov_pod
-  release_pod
+  mars_pod
 end
 
 
