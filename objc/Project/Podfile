@@ -9,10 +9,10 @@ install! 'cocoapods',
 platform :ios, '9.0'
 inhibit_all_warnings!
 
-source 'https://cdn.cocoapods.org/'
-source 'https://github.com/volcengine/volcengine-specs.git'
 
 def mars_pod
+  source 'https://cdn.cocoapods.org/'
+  source 'https://github.com/volcengine/volcengine-specs.git'
   pod 'VEKit', '22.6.13', :subspecs => [
     'OneKit',
     'VECampaign',
