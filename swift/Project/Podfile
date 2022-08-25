@@ -6,7 +6,7 @@ install! 'cocoapods',
   :warn_for_multiple_pod_sources => false,
   :deterministic_uuids => false
 
-  
+
 platform :ios, '9.0'
 inhibit_all_warnings!
 use_modular_headers!
@@ -14,73 +14,48 @@ use_modular_headers!
 source 'https://cdn.cocoapods.org/'
 source 'https://github.com/volcengine/volcengine-specs.git'
 
-def release_pod
-  pod 'OneKit',:subspecs => [
-    'BaseKit',
-    'Defaults',
-    'Database',
-    'MARS/Auth',
-    'Reachability',
-    'Service',
-    'StartUp',
-    'Screenshot'
+def mars_pod
+  source 'https://cdn.cocoapods.org/'
+  source 'https://github.com/volcengine/volcengine-specs.git'
+  pod 'VEKit', '22.8.22', :subspecs => [
+    'OneKit',
+    'VECampaign',
+    'VEH5Kit',
+    'VEAppUpdateHelper',
+    'VEInstall',
+    'VERemoteConfig',
+#    'VESafeKeyboard',
+    'RangersAppLog',
+    'RangersAPM',
+    'RARegisterKit',
+    'BDHotfix',
+    'Timor'
   ]
-  pod 'VEH5Kit'
-  pod 'BDHotfix'
-  pod 'TTNetworkManager','5.0.29.26'
-  pod 'RangersAPM', '>=2.0.0', :subspecs => [
-      'Crash',
-      'WatchDog',
-      'OOM',
-      'LAG',
-      'UserException',
-      'Monitors',
-      'UITrackers',
-      'Hybrid',
-      'MemoryGraph',
-      'Network',
-      'EventMonitor',
-      'CN'
-  ]
-  pod 'RangersAppLog','6.3.0-rc.2', :subspecs => [
-      'Core',
-      'Host/CN',
-      'OneKit',
-      'UITracker',
-      'Picker',
-      'Log',
-      'Unique'
+
+  pod 'VEKitDemo', '22.8.22', :subspecs => [
+    'UITask',
+    'OneKit',
+    'VECampaign',
+    'VEH5Kit',
+    'VEAppUpdateHelper',
+    'VEInstall',
+    'VERemoteConfig',
+#    'VESafeKeyboard',
+    'RangersAppLog',
+    'RangersAPM',
+    'BDHotfix',
+    'Timor'
     ]
+
   pod 'SwiftOneKit'
-  pod 'VEAppUpdateHelper', :subspecs => [
-      'VEUpdateHelper',
-      'VEUpdateView'
-   ]
-  pod 'VERemoteConfig', :subspecs => [
-  'Core',
-  'OneKit',
-  'TestPage'
-  ]
-  pod 'VEInstall', :subspecs => [
-      'Core',
-      'URL/CN',
-      'IDFA',
-      'CAID',
-      'OneKit'
-  ]
+  pod 'SDWebImage', '5.10.0'
+#  pod 'WCDBOptimizedSQLCipher',:git => 'https://github.com/lilidan/sqlcipher.git', :branch => 'sm4'
+
 end
 
-def ov_pod
-end
-
-def cn_pod
-  
-end
 
 target 'Template_InHouse' do
-  ov_pod
-  release_pod
-  pod 'App/Debug',:path => './../../DevPods/', :inhibit_warnings => false
+  mars_pod
 end
 
 
@@ -96,7 +71,7 @@ post_install do |installer|
   installer.pods_project.build_configurations.each do |config|
     update_deployment_config(config)
   end
-  
+
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       update_deployment_config(config)
@@ -107,7 +82,7 @@ post_install do |installer|
     project.build_configurations.each do |config|
       update_deployment_config(config)
     end
-    
+
     project.targets.each do |target|
       target.build_configurations.each do |config|
         update_deployment_config(config)
@@ -116,4 +91,3 @@ post_install do |installer|
   end
 
 end
-
