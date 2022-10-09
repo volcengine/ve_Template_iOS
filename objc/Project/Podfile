@@ -13,7 +13,7 @@ inhibit_all_warnings!
 def mars_pod
   source 'https://cdn.cocoapods.org/'
   source 'https://github.com/volcengine/volcengine-specs.git'
-  pod 'VEKit', '22.6.13', :subspecs => [
+  pod 'VEKit', :subspecs => [
     'OneKit',
     'VECampaign',
     'VEH5Kit',
