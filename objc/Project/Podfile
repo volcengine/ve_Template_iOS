@@ -15,25 +15,25 @@ def mars_pod
   source 'https://github.com/volcengine/volcengine-specs.git'
   pod 'VEKit', :subspecs => [
     'OneKit',
-#    'VECampaign',
+    'VECampaign',
     'VEH5Kit',
     'VEAppUpdateHelper',
     'VEInstall',
-     'VERemoteConfig',
-     'VESafeKeyboard',
+    'VERemoteConfig',
+    'VESafeKeyboard',
     'RangersAppLog',
     'RangersAPM',
     'RARegisterKit',
     'BDHotfix',
     'VEShare',
-#    'Timor',
-#    'TimorHostPlugins'
+    'Timor',
+    'TimorHostPlugins'
   ]
 
   pod 'VEKitDemo', :subspecs => [
     'UITask',
     'OneKit',
-#    'VECampaign',
+    'VECampaign',
     'VEH5Kit',
     'VEAppUpdateHelper',
     'VEInstall',
@@ -44,9 +44,11 @@ def mars_pod
     'BDHotfix',
     'VEShare',
     'VESMStorage',
-    'VEQRCode'
-#    'Timor'
+    'VEQRCode',
+    'Timor'
   ]
+  
+  pod 'SDWebImage','5.13.0'
 
    pod 'WCDBOptimizedSQLCipher',:git => 'https://github.com/lilidan/sqlcipher.git', :branch => 'sm4'
    pod 'SGQRCode',:git => 'https://github.com/lilidan/SGQRCode.git'
