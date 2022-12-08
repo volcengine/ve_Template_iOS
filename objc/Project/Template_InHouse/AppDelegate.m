@@ -18,6 +18,8 @@
 @end
 
 @implementation AppDelegate
+@end
+@end
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [OneKitApp startWithLaunchOptions:launchOptions];

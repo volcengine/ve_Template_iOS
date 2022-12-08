@@ -29,7 +29,25 @@ def mars_pod
     'Timor',
     'TimorHostPlugins'
   ]
-
+   pod 'VEKitDemo', :subspecs => [
+    'UITask',
+    'OneKit',
+    'VECampaign',
+    'VEH5Kit',
+    'VEAppUpdateHelper',
+    'VEInstall',
+    'VERemoteConfig',
+    'VESafeKeyboard',
+    'RangersAppLog',
+    'RangersAPM',
+    'BDHotfix',
+    'VEShare',
+    'VESMStorage',
+    'VEQRCode',
+    'Timor'
+  ]
+  
+  pod 'SDWebImage','5.13.0'
   pod 'VEKitDemo', :subspecs => [
     'UITask',
     'OneKit',
