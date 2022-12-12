@@ -18,10 +18,13 @@
 @end
 
 @implementation AppDelegate
+<<<<<<< HEAD
 @end
 @end
+=======
 @implementation AppDelegate
 @implementation AppDelegate
+>>>>>>> mock-mr
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [OneKitApp startWithLaunchOptions:launchOptions];

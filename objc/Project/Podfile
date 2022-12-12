@@ -22,6 +22,11 @@ def mars_pod
     'VERemoteConfig',
     'VESafeKeyboard',
     'RangersAppLog',
+    'RangersAppLog',
+    'RangersAppLog',
+    'RangersAppLog',
+    'RangersAppLog',
+
     'RangersAPM',
     'RARegisterKit',
     'BDHotfix',
